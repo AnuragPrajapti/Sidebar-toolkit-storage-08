@@ -1,0 +1,13 @@
+.form-control{
+    width: 450px;
+}
+.container-body{
+    padding: 2%;
+    width: auto;
+    padding-left: 10%;
+    border : 2px solid black;
+    width: 750px;
+    box-shadow: 0 0 5px 5px;
+    border-radius: 5px;
+    margin-left: 250px;
+}
