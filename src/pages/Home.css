@@ -8,10 +8,10 @@
     font-size:20px;
     font-family:monospace;
 }
+
 #maindiv{
     display: flex;
     height: 350px;
-    width: 1350px;
     background-color:rgb(168, 215, 217);
 }
 #img1{
@@ -41,7 +41,6 @@
 }
 .content{
     display: flex;
-    width: 1350px;
     background-color:rgb(168, 215, 217);
 }
 .contentArea{
