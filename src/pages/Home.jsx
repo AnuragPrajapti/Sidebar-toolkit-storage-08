@@ -38,7 +38,8 @@ function Home() {
           </p>
         </div>
         <div className='sideDiv'>
-          <h2>Contact US</h2> <hr />
+          <h3>Contact US</h3> 
+  ---------------------------------------------------
           <tr className='th' >
             <th>Name :-</th>
             <td>Anurag Prajpati</td>
@@ -92,9 +93,9 @@ function Home() {
               <h6 class="text-white mt-4 mb-3">Follow Us</h6>
               <div class="d-flex pt-1" >
                 <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-youtube"></i></a>
-                <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-square btn-outline-light me-1" href="https://www.facebook.com/anurag.prajapati.5648"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square btn-outline-light me-1" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-square btn-outline-light me-1" href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
@@ -113,7 +114,7 @@ function Home() {
             <div class="col-md-6 text-center text-md-end">
                {/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support.  */}
               Designed By <a href="https://htmlcodex.com">React JS</a>
-              <br />Distributed By: <a href="https://themewagon.com" target="_blank">Anurag Prajpati</a>
+              <br />Distributed By: <a href="/login" target="_blank">Anurag Prajpati</a>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ const Login = () => {
       toast.success("User Login Successfully!!",{
          position : "top-center"
       })
-      // navigate('/deshboard')
+      navigate('/deshboard')
       dispatch(loginData(inpval))
      }
       else {
