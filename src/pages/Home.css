@@ -81,3 +81,65 @@
     margin-top: 48px;
     background-color: #212020;
 }
+.ather_img img{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+
+.panel-wrapper{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+  }
+  
+  .column-1{
+    width:50%;
+    background-color:#fff;
+  }
+  
+  .column-2{
+    width:50%;
+  }
+  
+  .after-section, .before-section{
+    height:100vh;
+    background-color:#333;
+    width:100%;
+    z-index:9;
+  }
+  
+  .panel.align-top {
+    align-items: flex-start;
+  }
+  
+  .panel h1 {
+    font-size: 1.8em;
+    color: white;
+    font-weight: 300;
+    margin: 0 auto;
+  }
+  .panel.description {
+    padding-bottom: 60px;
+  }
+  .panel p, .panel li {
+    color: black;
+    font-weight: 400;
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin: 0.3em 0 1em 0;
+  }
+  .panel p strong, .panel li strong {
+    color: white;
+    font-weight: 400;
+  }
+  .panel p code, .panel li code {
+    background-color: rgba(255,255,255,0.15);
+    padding: 2px 4px;
+    border-radius: 5px;
+  }
+  .panel li {
+    margin: 0;
+  }

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect , useState } from 'react'
 import { useForm } from 'react-hook-form';
 import img from '../Images/img.webp'
 import './style.css'
@@ -29,15 +29,6 @@ export default function Form() {
       data
     ))
   };
-  const [state, setState] = useState({
-    number: null
-  });
-  const onChange = (e) => {
-    var val = e.target.value;
-    setState({
-      number: val.replace(/\W/gi, '').replace(/(.{4})/g, '$1   ')
-    });
-  }
 
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
@@ -51,11 +42,7 @@ export default function Form() {
       setIcon(eyeOff);
       setType('password');
     }
-    var val = e.target.value;
-    setState({
-      number: val.replace(/\W/gi, '').replace(/(.{4})/g, '$1   ')
-    });
-  }
+    }
 
   return (
     <section className='container ' >
@@ -68,19 +55,19 @@ export default function Form() {
             {errors.name?.type === "required" && "Please enter name..."}
             <input type="email" {...register("email", { required: true, })} placeholder='test@gmail.com' />
             {errors.email?.type === "required" && "Please enter email..."}
-            <input type="password" {...register("password", { required: true, maxLength: 8 })} placeholder='password' />
-            {errors.password?.type === "required" && "Please enter password..."}
-            {errors.password?.type === "maxLength" && "Password maxLength is 8 "}
+            <div className='input-field'>
+              <input type={type} {...register("password", { required: true, maxLength: 8 })} placeholder='password' />
+              <span onClick={handleToggle} ><Icon icon={icon} size={18} /></span>
+              {errors.password?.type === "required" && "Please enter password..."}
+              {errors.password?.type === "maxLength" && "Password maxLength is 8 "}
+            </div>
             <input type="date" {...register("date", { required: true })} />
             {errors.date?.type === "required" && "Please enter Date..."}
             <input type="number" {...register("number", { required: true, minLength: 10, maxLength: 10 })} placeholder='mobile number' />
             {errors.number?.type === "required" && "Mobile Number is required"}
             {errors.number?.type === "minLength" && "min Length Exceed"}
             {errors.number?.type === "maxLength" && "Max Length Exceed"}
-            <div className='input-field'>
-              <input onChange={onChange} value={state.number} type={type} placeholder="Enter-Adhar-Number" />
-              <span onClick={handleToggle} ><Icon icon={icon} size={18} /></span>
-            </div>
+
             <button className='btn'>Register</button>
             <p className='mt-3'>Alredy Have an Accout?<span><NavLink to="/login" >Login</NavLink></span> </p>
           </form>
