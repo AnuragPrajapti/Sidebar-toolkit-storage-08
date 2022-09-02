@@ -14,8 +14,7 @@ import { ScrollTrigger } from 'react-gsap';
 
 
 
-
-function Home() {
+const Home = () => {
   const title = useContext(NoteContext)
   useEffect(() => {
     title.setTitle("")
@@ -41,7 +40,7 @@ function Home() {
     ScrollTrigger.create({
       trigger: panel,
       start: "bottom bottom",
-      onEnter: () => goToSection(i),
+      onEnterBack: () => goToSection(i),
     })
   })
 
@@ -65,27 +64,23 @@ function Home() {
       </div>
 
       {/* Ather Intelligence Section  Work  Start */}
-      <div className="panel-wrapper"></div>
       <div className='ather_proj'>
         <div className='ather_img' >
-          <img src={ather1} alt="ather" />
-          <div className="column-2">
-            <section className="panel">
-              <img src={ather2} alt="" height="500px" />
+            <section   className="panel">
+              <img src={ather1} alt="ather"  />
             </section>
             <section className="panel">
-              <img src={ather3} alt="" height="500px" />
+              <img src={ather2} alt="" id="atherImg1" />
             </section>
             <section className="panel">
-              <img src={ather4} alt="" height="500px" />
+              <img src={ather3} alt="" id="atherImg2" />
             </section>
-            
-          </div>
-        </div>
+            <section className="panel">
+              <img src={ather4} alt="" id="atherImg3" />
+            </section>
+         </div>
       </div>
-      {/* <section class="after-section">FIVE</section> */}
-      {/* Ather Intelligence Section  Work  end */}
-
+        {/* Ather Intelligence Section  Work  end */}
       <div className='content'>
         <div className='contentArea' >
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero totam iusto doloremque nobis. Obcaecati at culpa repudiandae dolore vitae veniam ea dignissimos cumque. Quaerat maxime optio dolorem ipsa sed rerum.
