@@ -1,15 +1,18 @@
 
+
 .register{
-  margin-top: -45px;
-  max-width: 878px;
-  margin-left: -155px;
+  max-width: 890px;
   width: 80vw;
   display:flex;
   border: 1px solid #e9ecef;
   border-radius: 5px;
   background-color: white;
+ 
 }
-
+.register hr{
+     width: 100%;
+     margin-top: -20px;
+}
 .register span{
   color: #adb5bd;
 }
@@ -87,9 +90,9 @@ hr{
 }
 .input-field{
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
 }
 
 .input-field input{
@@ -101,7 +104,3 @@ hr{
   text-indent: 2px;
   padding: 5px;  
 }
-/* 
-.input-field span{
-  cursor: pointer;
-} */

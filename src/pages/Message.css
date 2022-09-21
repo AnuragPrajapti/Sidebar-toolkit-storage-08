@@ -2,3 +2,8 @@
     padding-top: 100px;
     text-align: center;
 }
+
+.liftBotton button{
+    display: block;
+    margin : 20px 0px 0px 500px ;
+}

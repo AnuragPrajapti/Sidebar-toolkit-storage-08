@@ -45,18 +45,18 @@ export default function Form() {
     }
 
   return (
-    <section className='container ' >
+    <section className='containerWrapper' >
       <div className="register">
         <div className="col-1">
+          <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
           <h2>Register Here!!</h2>
           <hr></hr>
-          <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
             <input type="text" {...register("name", { required: true })} placeholder='FullName' />
             {errors.name?.type === "required" && "Please enter name..."}
             <input type="email" {...register("email", { required: true, })} placeholder='test@gmail.com' />
             {errors.email?.type === "required" && "Please enter email..."}
             <div className='input-field'>
-              <input type={type} {...register("password", { required: true, maxLength: 8 })} placeholder='password' />
+              <input type={type} {...register("password", { required: true, maxLength: 8 })} placeholder='password'  />
               <span onClick={handleToggle} ><Icon icon={icon} size={18} /></span>
               {errors.password?.type === "required" && "Please enter password..."}
               {errors.password?.type === "maxLength" && "Password maxLength is 8 "}

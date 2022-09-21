@@ -12,7 +12,6 @@ import Messages from './pages/Message';
 import Settings from './pages/Settings';
 import NoteState from './Context/NoteState';
 
-
 function App() {
   return (
     <>
