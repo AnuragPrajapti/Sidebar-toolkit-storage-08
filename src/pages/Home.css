@@ -4,6 +4,7 @@
     width: 100%;
     height: 550px;
 }
+
 .marquee{
     color:aqua;
     font-size:20px;
@@ -17,11 +18,15 @@
     background-color:rgb(168, 215, 217);
 }
 
+.imageStyle{
+   width: 33.33%;
+}
+
 #img1{
     margin-top: 15px;
     margin-left: 25px;
     height: 320px;
-    width: 100%;
+    width: 90%;
     box-shadow: 0px 0px 20px 10px rgb(133, 139, 126);
     border-radius: 15px;
     float: left;
@@ -29,27 +34,29 @@
 
 #img2{
     margin-top: 15px;
-    margin-left: 45px;
+    margin-left: 15px;
     height: 320px;
-    width: 100%;
+    width: 90%;
     box-shadow: 0px 0px 20px 10px rgb(133, 139, 126);
     border-radius: 15px;
 }
+
 #img3{
     margin-top: 15px;
     margin-right: -65px;
     height: 320px;
-    width: 100%;
-    float: right;
+    width: 90%;
     box-shadow: 0px 0px 20px 10px rgb(133, 139, 126);
     border-radius: 15px;
 }
+
 .content{
     width: 100%;
     height: 100%;
     display: flex;
     background-color:rgb(168, 215, 217);
 }
+
 .contentArea{
     background-color: rgb(106, 86, 125);
     width: 65%;
@@ -60,9 +67,10 @@
     font-family: monospace;
     color: black;
     /* margin-bottom: 35px; */
-    margin-top: 70px;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
+
 .sideDiv{
     width:30% ;
     float: left;
@@ -71,13 +79,16 @@
     text-align: center;
     margin-top: px;
 }
+
 .th{
     display: flex;
     flex-direction: column;
 }
+
 .follow{
     color: darkslategray;
 }
+
 .footer{
     margin-top: 48px;
     background-color: #212020;
@@ -140,8 +151,6 @@
     box-sizing: border-box;
     padding: 10px;
   }
-  
-
   /* SCROLL DOWN */ 
   .scroll-down {
     position: absolute; 
@@ -154,7 +163,6 @@
     font-size: 16px;
     overflow: visible;
   }
-
    
   .panel {
     height: 100vh;
@@ -169,12 +177,14 @@
   float: right;
   margin-right: 750px;
 }
+
 #atherImg2{
   height: 60%;
   width: 25%;
   margin-bottom: -500px;
   margin-left: 220px;
 }
+
 #atherImg3{
   height: 60%;
   width: 25%;

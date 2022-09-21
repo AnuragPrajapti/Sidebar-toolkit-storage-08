@@ -148,7 +148,7 @@ const Settings = () => {
         values: foundOptions,
       }
 
-      if (option.header.name.toLocaleLowerCase().search(value.trim().toLowerCase()) !== -1) {
+      if (option.header.name.toLocaleLowerCase().search(value.trim().toLowerCase()) !== -1){
         returnedItem[index] = {
           header: {
             name: option.header.name
@@ -156,10 +156,8 @@ const Settings = () => {
           values: options[index].values,
         }
       }
-
     })
     setVisibleOptions(returnedItem)
-
   }
 
   return (

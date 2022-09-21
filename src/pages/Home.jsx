@@ -12,75 +12,47 @@ import NoteContext from '../Context/NoteContext';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'react-gsap';
 
-
-
 const Home = () => {
   const title = useContext(NoteContext)
   useEffect(() => {
     title.setTitle("")
   }, [])
 
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  const goToSection = (i, anim) => {
-    gsap.to(".panel", {
-      scrollTo: { autoKill: false },
-      duration: 1.4,
-      overwrite: true
-    });
-  }
-
-  gsap.utils.toArray(".panel").forEach((panel, i) => {
-    ScrollTrigger.create({
-      trigger: panel,
-      onEnter: () => goToSection(i),
-    })
-
-    ScrollTrigger.create({
-      trigger: panel,
-      start: "bottom bottom",
-      onEnterBack: () => goToSection(i),
-    })
-  })
-
   return (
-
     <div>
       <marquee className="marquee" >Have you ever made an impulsive purchase just because you were offered a good discount? Or felt encouraged to buy from a brand that is new to you but offers something cheaper?</marquee>
       <div>
         <img src={img} alt="img" className='images' />
       </div>
       <div id='maindiv'>
-        <div>
+        <div className='imageStyle' >
           <img id='img1' src={img1} alt="img1" />
         </div>
-        <div>
+        <div className='imageStyle'>
           <img id='img2' src={img2} alt="img2" />
         </div>
-        <div >
+        <div className='imageStyle'>
           <img id='img3' src={img3} alt="img3" />
         </div>
       </div>
-
       {/* Ather Intelligence Section  Work  Start */}
       <div className='ather_proj'>
         <div className='ather_img' >
-            <section   className="panel">
-              <img src={ather1} alt="ather"  />
-            </section>
-            <section className="panel">
-              <img src={ather2} alt="" id="atherImg1" />
-            </section>
-            <section className="panel">
-              <img src={ather3} alt="" id="atherImg2" />
-            </section>
-            <section className="panel">
-              <img src={ather4} alt="" id="atherImg3" />
-            </section>
-         </div>
+          <section className="panel">
+            <img src={ather1} alt="ather" />
+          </section>
+          <section className="panel">
+            <img src={ather2} alt="" id="atherImg1" />
+          </section>
+          <section className="panel">
+            <img src={ather3} alt="" id="atherImg2" />
+          </section>
+          <section className="panel">
+            <img src={ather4} alt="" id="atherImg3" />
+          </section>
+        </div>
       </div>
-        {/* Ather Intelligence Section  Work  end */}
+      {/* Ather Intelligence Section  Work  end */}
       <div className='content'>
         <div className='contentArea' >
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero totam iusto doloremque nobis. Obcaecati at culpa repudiandae dolore vitae veniam ea dignissimos cumque. Quaerat maxime optio dolorem ipsa sed rerum.
@@ -91,7 +63,7 @@ const Home = () => {
         <div className='sideDiv'>
           <h3>Contact US</h3>
           ---------------------------------------------------
-          <tr className='th' >
+          <tr className='th'>
             <th>Name :-</th>
             <td>Anurag Prajpati</td>
             <th>Email :-</th>
@@ -106,7 +78,6 @@ const Home = () => {
       </div>
 
       <div className='footer' >
-
         <div className="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn" data-wow-delay="0.1s">
           <div className="container">
             <div className="row g-5">
@@ -143,17 +114,16 @@ const Home = () => {
                 </form>
                 <h6 className="text-white mt-4 mb-3">Follow Us</h6>
                 <div className="d-flex pt-1" >
-                  <a className="btn btn-square btn-outline-light me-1" href=""><i className="fab fa-twitter"></i></a>
-                  <a className="btn btn-square btn-outline-light me-1" href="https://www.facebook.com/anurag.prajapati.5648"><i className="fab fa-facebook-f"></i></a>
-                  <a className="btn btn-square btn-outline-light me-1" href="https://www.youtube.com/"><i className="fab fa-youtube"></i></a>
-                  <a className="btn btn-square btn-outline-light me-1" href="https://www.linkedin.com/feed/"><i className="fab fa-linkedin-in"></i></a>
+                  <a className="btn btn-square btn-outline-light me-1" target="_blank" href=""><i className="fab fa-twitter"></i></a>
+                  <a className="btn btn-square btn-outline-light me-1" target="_blank" href="https://www.facebook.com/anurag.prajapati.5648"><i className="fab fa-facebook-f"></i></a>
+                  <a className="btn btn-square btn-outline-light me-1" target="_blank" href="https://www.youtube.com/"><i className="fab fa-youtube"></i></a>
+                  <a className="btn btn-square btn-outline-light me-1" target="_blank" href="https://www.linkedin.com/feed/"><i className="fab fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
         {/* Footer End  */}
-
 
         {/* Copyright Start  */}
         <div className="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
@@ -163,7 +133,6 @@ const Home = () => {
                 &copy; <a href="#">Your Site Name</a>, All Right Reserved.
               </div>
               <div className="col-md-6 text-center text-md-end">
-                {/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support.  */}
                 Designed By <a href="https://htmlcodex.com">React JS</a>
                 <br />Distributed By: <a href="/login" target="_blank">Anurag Prajpati</a>
               </div>
@@ -172,7 +141,6 @@ const Home = () => {
         </div>
         {/* Copyright End  */}
       </div>
-
     </div>
   );
 }
