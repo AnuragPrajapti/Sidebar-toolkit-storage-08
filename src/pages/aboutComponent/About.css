@@ -1,0 +1,30 @@
+
+.headingContainer{
+  width: 15%;
+  margin-top: 22px;
+  margin-left: 30px;
+}
+
+.headingContainer img{
+  margin-left: 65px;
+  height: 150px;
+  border-radius: 50%;
+  width: 30;
+}
+
+.headingContainer p {
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  border-bottom: 2px solid black;
+
+}
+
+.headingContentArea{
+  width: 80%;
+  padding: 25px;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  box-shadow: 0px 0px 1px 1px;
+}
+

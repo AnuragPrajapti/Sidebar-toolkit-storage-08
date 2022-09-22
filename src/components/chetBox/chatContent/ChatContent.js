@@ -10,49 +10,49 @@ export default class ChatContent extends Component {
     {
       key: 1,
       image:
-        "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        "https://picsum.photos/id/237/200/300",
       type: "",
-      msg: "Hi Tim, How are you?",
+      msg: "Hey Sir, How Are You ..?",
     },
     {
       key: 2,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://picsum.photos/200/300?grayscale",
       type: "other",
       msg: "I am fine.",
     },
     {
       key: 3,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://picsum.photos/200/300?grayscale",
       type: "other",
       msg: "What about you?",
     },
     {
       key: 4,
       image:
-        "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        "https://picsum.photos/id/237/200/300",
       type: "",
       msg: "Awesome these days.",
     },
     {
       key: 5,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://picsum.photos/200/300?grayscale",
       type: "other",
       msg: "Finally. What's the plan?",
     },
     {
       key: 6,
       image:
-        "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        "https://picsum.photos/id/237/200/300",
       type: "",
       msg: "what plan mate?",
     },
     {
       key: 7,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://picsum.photos/200/300?grayscale",
       type: "other",
       msg: "I'm taliking about the tutorial",
     },
@@ -79,7 +79,7 @@ export default class ChatContent extends Component {
             type: "",
             msg: this.state.msg,
             image:
-              "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+              "https://picsum.photos/id/237/200/300",
           });
           this.setState({ chat: [...this.chatItms] });
           this.scrollToBottom();
@@ -101,7 +101,7 @@ export default class ChatContent extends Component {
             <div className="current-chatting-user">
               <Avatar
                 isOnline="active"
-                image={prahar}
+                image='https://picsum.photos/200/300?grayscale'
               />
               <p>Prakhar Jain</p>
             </div>

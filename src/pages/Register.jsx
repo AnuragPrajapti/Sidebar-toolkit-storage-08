@@ -70,6 +70,7 @@ export default function Form() {
 
             <button className='btn'>Register</button>
             <p className='mt-3'>Alredy Have an Accout?<span><NavLink to="/login" >Login</NavLink></span> </p>
+          <p>&copy; All Right Reserved....</p>
           </form>
         </div>
         <div className="col-2">

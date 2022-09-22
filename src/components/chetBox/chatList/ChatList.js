@@ -6,7 +6,7 @@ export default class ChatList extends Component {
   allChatUsers = [
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        "https://picsum.photos/200/300/?blur=2",
       id: 1,
       name: "Snajye Gupta",
       active: true,
@@ -14,72 +14,72 @@ export default class ChatList extends Component {
     },
     {
       image:
-        'Anurag   ',
+        'https://picsum.photos/200/300.webp',
       id: 2,
-      name: "Ayub Rossi",
+      name: "Prakhar Jain",
       active: false,
       isOnline: false,
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQEZrATmgHOi5ls0YCCQBTkocia_atSw0X-Q&usqp=CAU",
+        "https://picsum.photos/200/300.jpg",
       id: 3,
-      name: "Hamaad Dejesus",
+      name: "Markand Dighe",
       active: false,
       isOnline: false,
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ6tM7Nj72bWjr_8IQ37Apr2lJup_pxX_uZA&usqp=CAU",
+        "https://picsum.photos/id/870/200/300?grayscale&blur=2",
       id: 4,
-      name: "Eleni Hobbs",
+      name: "Pushpraj Singh",
       active: false,
       isOnline: true,
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJo1MiPQp3IIdp54vvRDXlhbqlhXW9v1v6kw&usqp=CAU",
+        "https://picsum.photos/200/300/?blur=2",
       id: 5,
-      name: "Elsa Black",
+      name: "Sourabh Dasoundhi",
       active: false,
       isOnline: false,
     },
     {
       image:
-        "https://huber.ghostpool.com/wp-content/uploads/avatars/3/596dfc2058143-bpfull.png",
+        "https://picsum.photos/200/300?grayscale",
       id: 6,
-      name: "Kayley Mellor",
+      name: "Narendra Kushwah",
       active: false,
       isOnline: true,
     },
     {
       image:
-        "https://www.paintingcontest.org/components/com_djclassifieds/assets/images/default_profile.png",
+        "https://picsum.photos/seed/picsum/200/300",
       id: 7,
-      name: "Hasan Mcculloch",
+      name: "Kishan Singh",
       active: false,
       isOnline: true,
     },
     {
       image:
-        "https://auraqatar.com/projects/Anakalabel/media//vesbrand/designer4.jpg",
+        "https://picsum.photos/id/237/200/300",
       id: 8,
-      name: "Autumn Mckee",
+      name: "Dheeraj Pal",
       active: false,
       isOnline: false,
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSM6p4C6imkewkCDW-9QrpV-MMAhOC7GnJcIQ&usqp=CAU",
+        "https://picsum.photos/200",
       id: 9,
-      name: "Allen Woodley",
+      name: "Umesh Patel",
       active: false,
       isOnline: true,
     },
     {
-      image: "https://pbs.twimg.com/profile_images/770394499/female.png",
+      image: "https://picsum.photos/200/300",
       id: 10,
-      name: "Manpreet David",
+      name: "Yuvraj Singh",
       active: false,
       isOnline: true,
     },
@@ -124,7 +124,6 @@ export default class ChatList extends Component {
               />
             );
           })}
-          {/* <img src={Anurag} alt="img" /> */}
         </div>
       </div>
     );

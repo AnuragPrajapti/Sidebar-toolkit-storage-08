@@ -7,3 +7,10 @@
     display: block;
     margin : 20px 0px 0px 500px ;
 }
+
+.containerWrapperMessage{
+    background-color: blanchedalmond;
+    box-shadow: 0px 0px 5px 5px;
+    margin-top: 30px;
+    border-radius: 5px;
+}

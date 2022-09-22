@@ -1,29 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react'
 import NoteContext from '../Context/NoteContext'
-import { Button, Modal, Dropdown, Menu, message, Space, MenuProps } from 'antd';
 import './Message.css'
-import 'antd/dist/antd.css';
-import { DownOutlined } from '@ant-design/icons';
 import ChatBody from '../components/chetBox/chatBody/ChatBody';
 
-
-
 const Messages = () => {
-  const [ changeValue , setChangeValue ] = useState();
-  const handleChange = (e) =>{
-         console.log("object",e.target.value);
-         setChangeValue(e);
-  }
 
+  const [title, setTitle] = useState();
+  const subject = useContext(NoteContext);
 
   useEffect(() => {
- 
+    subject.setTitle("Message Component...")
   }, [])
-  
 
   return (
     <>
-      <div className="container">
+      <div className="container containerWrapperMessage">
           <ChatBody />
       </div>
     </>

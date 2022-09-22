@@ -101,12 +101,12 @@ const Settings = () => {
         },
         {
           name: "CEF",
-          description: "veiw your ask quetions amd answer",
+          description: "veiw yhttps://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpgour ask quetions amd answer",
           tags: []
         },
         {
           name: "FFF",
-          description: "veiw your ask quetions amd answer",
+          description: "veiw yhttps://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpgour ask quetions amd answer",
           tags: []
         },
         {
