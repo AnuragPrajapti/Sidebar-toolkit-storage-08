@@ -1,4 +1,4 @@
-import React, { useContext, useEffect , useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import img from '../Images/img.webp'
 import './style.css'
@@ -10,6 +10,7 @@ import Icon from 'react-icons-kit';
 import { eye } from 'react-icons-kit/feather/eye'
 import { eyeOff } from 'react-icons-kit/feather/eyeOff'
 import LinkedinContainer from './linkedin/LinkedinContainer';
+import { Spinner } from 'react-bootstrap';
 
 export default function Form() {
 
@@ -22,13 +23,14 @@ export default function Form() {
   }, [])
 
   const dispatch = useDispatch();
-
+  const [loader, setLoader] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm()
   const onSubmit = data => {
     reset();
     dispatch(registerData(
       data
     ))
+      setLoader(true);
   };
 
   const [type, setType] = useState('password');
@@ -43,17 +45,21 @@ export default function Form() {
       setIcon(eyeOff);
       setType('password');
     }
-    }
+  }
+  //Spinner Functionality   
+  setTimeout(() => {
+    setLoader(false);
+  }, 5000);
 
   return (
     <section className='container' >
-    <div className="register">
+      <div className="register">
         <div className="registerForm">
           <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
-          <h2>Register Here!!</h2>
-          <hr></hr>
-           <LinkedinContainer />
-           <button></button>
+            <h2>Register Here!!</h2>
+            <hr></hr>
+            <LinkedinContainer />
+            <button></button>
             <input type="text" {...register("name", { required: true })} placeholder='FullName' />
             {errors.name?.type === "required" && "Please enter name..."}
             <input type="email" {...register("email", { required: true, })} placeholder='test@gmail.com' />
@@ -70,16 +76,17 @@ export default function Form() {
             {errors.number?.type === "required" && "Mobile Number is required"}
             {errors.number?.type === "minLength" && "min Length Exceed"}
             {errors.number?.type === "maxLength" && "Max Length Exceed"}
-
-            <button className='btn'>Register</button>
+            {
+              loader ? <Spinner animation="border" /> : <button className='btn'>Register</button>
+            }
             <p className='mt-3'>Alredy Have an Accout?<span><NavLink to="/login" >Login</NavLink></span> </p>
-          <p>&copy; All Right Reserved....</p>
+            <p>&copy; All Right Reserved....</p>
           </form>
         </div>
         <div className="registerImage">
           <img src={img} alt="img" />
         </div>
-        </div>
+      </div>
     </section>
   )
 }                 
