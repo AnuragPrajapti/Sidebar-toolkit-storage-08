@@ -9,6 +9,7 @@ import NoteContext from '../Context/NoteContext';
 import Icon from 'react-icons-kit';
 import { eye } from 'react-icons-kit/feather/eye'
 import { eyeOff } from 'react-icons-kit/feather/eyeOff'
+import LinkedinContainer from './linkedin/LinkedinContainer';
 
 export default function Form() {
 
@@ -45,12 +46,14 @@ export default function Form() {
     }
 
   return (
-    <section className='containerWrapper' >
-      <div className="register">
-        <div className="col-1">
+    <section className='container' >
+    <div className="register">
+        <div className="registerForm">
           <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
           <h2>Register Here!!</h2>
           <hr></hr>
+           <LinkedinContainer />
+           <button></button>
             <input type="text" {...register("name", { required: true })} placeholder='FullName' />
             {errors.name?.type === "required" && "Please enter name..."}
             <input type="email" {...register("email", { required: true, })} placeholder='test@gmail.com' />
@@ -73,10 +76,10 @@ export default function Form() {
           <p>&copy; All Right Reserved....</p>
           </form>
         </div>
-        <div className="col-2">
-          <img src={img} alt="" />
+        <div className="registerImage">
+          <img src={img} alt="img" />
         </div>
-      </div>
+        </div>
     </section>
   )
 }                 

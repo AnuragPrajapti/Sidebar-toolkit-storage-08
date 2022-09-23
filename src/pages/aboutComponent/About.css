@@ -1,22 +1,33 @@
 
+.resume{
+  border: 2px solid #e9ecef;
+  width: 1100px;
+  box-shadow: 0 0 2px 0px;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.resume h3{
+  color: rgb(85, 154, 177);
+}
+
 .headingContainer{
-  width: 15%;
+  width: 70%;
   margin-top: 22px;
-  margin-left: 30px;
+  margin-left: 150px;
+  border-bottom: 2px solid black;
 }
 
 .headingContainer img{
   margin-left: 65px;
   height: 150px;
   border-radius: 50%;
-  width: 30;
 }
 
 .headingContainer p {
-  text-align: center;
-  margin-top: 4px;
-  margin-bottom: 2px;
-  border-bottom: 2px solid black;
+    /* text-align: center; */
+    margin: 4px 0px 2px 80px;
+    width: 100%;
 
 }
 
@@ -28,3 +39,80 @@
   box-shadow: 0px 0px 1px 1px;
 }
 
+.contactDetails{
+    float: right;
+    margin-top: -100px;
+    margin-right: 60px;
+}
+
+.contactDetails span{
+    font-weight: 600;
+}
+
+.objective{
+  margin-top: 30px;
+  width: 30%;
+  margin-left: 150px;
+}
+
+.peragraph{
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.acadmicBackground {
+  margin-top: 30px;
+  width: 30%;
+  margin-left: 150px;
+}
+
+.hobbies {
+  margin-top: 30px;
+  width: 30%;
+  margin-left: 150px;
+}
+
+.strength{
+  margin-top: 30px;
+  width: 30%;
+  margin-left: 150px;
+}
+
+.certificate{
+  width: 30%;
+  float: right;
+  margin-top: -710px;
+  margin-right: 150px;
+}
+
+.experience{
+  width: 30%;
+  float: right;
+  margin-top: -520px;
+  margin-right: 150px;
+}
+
+.skills {
+  width: 30%;
+  float: right;
+  margin-top: -320px;
+  margin-right: 150px;
+}
+
+.areaOfInterest {
+  width: 30%;
+  float: right;
+  margin-top: -80px;
+  margin-right: 150px;
+}
+
+.project{
+  margin-left: 150px;
+
+}
+
+.declaration{
+   margin-left: 150px;
+   margin-top: 40px;
+
+}
