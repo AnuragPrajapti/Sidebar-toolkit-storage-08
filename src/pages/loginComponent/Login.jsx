@@ -2,11 +2,11 @@ import React, { useContext, useState , useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
-import { loginData } from '../redux-Toolkit/reducer/createSlice'
+import { loginData } from '../../redux-Toolkit/reducer/createSlice'
 import { NavLink } from 'react-router-dom'
 import { toast , ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import NoteContext from '../Context/NoteContext'
+import NoteContext from '../../Context/NoteContext'
 
 const Login = () => {
 

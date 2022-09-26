@@ -2,14 +2,14 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Register from "./pages/Register";
+import Home from "./pages/homeComponent/Home";
+import Register from "./pages/registrCompnent/Register";
 import About from "./pages/aboutComponent/About";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Deshboard from "./pages/Deshboard";
-import Login from "./pages/Login";
-import Messages from "./pages/Message";
-import Settings from "./pages/Settings";
+import Deshboard from "./pages/dashboardComponent/Deshboard";
+import Login from "./pages/loginComponent/Login";
+import Messages from "./pages/messageComponent/Message";
+import Settings from "./pages/settingComponent/Settings";
 import NoteState from "./Context/NoteState";
 
 function App() {

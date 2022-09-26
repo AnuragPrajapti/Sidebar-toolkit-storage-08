@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import NoteContext from '../Context/NoteContext';
+import NoteContext from '../../Context/NoteContext';
 import { Link } from 'react-router-dom';
 const Settings = () => {
   const title = useContext(NoteContext)

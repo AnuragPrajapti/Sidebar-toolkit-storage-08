@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
-import img from '../Images/img.webp'
-import './style.css'
+import img from '../../Images/img.webp'
+import './Register.css'
 import { useDispatch } from 'react-redux';
-import { registerData } from '../redux-Toolkit/reducer/createSlice';
+import { registerData } from '../../redux-Toolkit/reducer/createSlice';
 import { NavLink } from 'react-router-dom';
-import NoteContext from '../Context/NoteContext';
+import NoteContext from '../../Context/NoteContext';
 import Icon from 'react-icons-kit';
 import { eye } from 'react-icons-kit/feather/eye'
 import { eyeOff } from 'react-icons-kit/feather/eyeOff'
-import LinkedinContainer from './linkedin/LinkedinContainer';
+import LinkedinContainer from '../linkedin/LinkedinContainer';
 import { Spinner } from 'react-bootstrap';
 
 export default function Form() {

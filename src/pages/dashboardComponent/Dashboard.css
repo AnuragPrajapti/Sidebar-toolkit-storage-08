@@ -1,0 +1,51 @@
+.table_body{
+  background-color:#a6b4c3;
+   margin-top: 48px;
+   text-align: center;
+   align-items: center;
+   width: 70%;
+   margin-left: 200px;   
+   box-shadow: 0px 0px 20px 8px rgb(133, 139, 126) ;
+   border-radius: 5px;
+}
+
+.tbody{
+  color: black;
+}
+
+.input-field{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+}
+
+.input-field input{
+  width: 100%;
+  height: 100%;
+  border: hidden;
+  outline: none;
+  font-size: 18px;
+  text-indent: 2px;
+  padding: 5px;  
+}
+
+.modal-title {
+  margin-left: 100px;
+  font-size: 30px;
+  color: cadetblue; 
+  font-family: monospace;    
+} 
+
+.deshboard{
+  background-color:rgb(65, 65, 82); 
+  height: 100vh;
+  margin-top: -20px;
+}
+
+.header {
+  color: #98b6d4;
+  text-align: center;
+  padding : 30px 0px 0px 0px;
+  margin: 0 0 -20px 0;
+}

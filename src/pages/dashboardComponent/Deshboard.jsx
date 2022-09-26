@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react'
-import './style.css'
+import './Dashboard.css'
 import DeleteIcon from '@mui/icons-material/Delete';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
-import { deleteData } from '../redux-Toolkit/reducer/createSlice';
+import { deleteData } from '../../redux-Toolkit/reducer/createSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { editData } from '../redux-Toolkit/reducer/createSlice';
+import { editData } from '../../redux-Toolkit/reducer/createSlice';
 import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { updateData } from '../redux-Toolkit/reducer/createSlice';
+import { updateData } from '../../redux-Toolkit/reducer/createSlice';
 import { NavLink } from 'react-router-dom';
-import NoteContext from '../Context/NoteContext';
+import NoteContext from '../../Context/NoteContext';
 import { eye } from 'react-icons-kit/feather/eye'
 import { eyeOff } from 'react-icons-kit/feather/eyeOff'
 import { Spinner } from 'react-bootstrap';

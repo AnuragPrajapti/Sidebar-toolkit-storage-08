@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
-import NoteContext from '../Context/NoteContext'
+import NoteContext from '../../Context/NoteContext'
 import './Message.css'
-import ChatBody from '../components/chetBox/chatBody/ChatBody';
+import ChatBody from '../../components/chetBox/chatBody/ChatBody';
 
 const Messages = () => {
 

@@ -1,16 +1,15 @@
 import './Home.css'
 import React, { useContext, useEffect } from 'react';
-import img from '../Images/HomeImg.jpg'
-import img1 from '../Images/img1.jpg'
-import img2 from '../Images/img2.jpeg'
-import img3 from '../Images/img3.jpeg'
-import ather1 from '../Images/ather1.jpg'
-import ather2 from '../Images/ather2.jpg'
-import ather3 from '../Images/ather3.jpg'
-import ather4 from '../Images/ather4.jpg'
-import NoteContext from '../Context/NoteContext';
-import { gsap } from "gsap";
-import { ScrollTrigger } from 'react-gsap';
+import img from '../../Images/HomeImg.jpg'
+import img1 from '../../Images/img1.jpg'
+import img2 from '../../Images/img2.jpeg'
+import img3 from '../../Images/img3.jpeg'
+import ather1 from '../../Images/ather1.jpg'
+import ather2 from '../../Images/ather2.jpg'
+import ather3 from '../../Images/ather3.jpg'
+import ather4 from '../../Images/ather4.jpg'
+import NoteContext from '../../Context/NoteContext';
+
 
 const Home = () => {
   const title = useContext(NoteContext)
