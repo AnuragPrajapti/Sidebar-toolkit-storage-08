@@ -81,10 +81,7 @@
 .tbody{
   color: black;
 }
-.deshboard{
-  background-color:rgb(65, 65, 82); 
-  height: 100vh;
-}
+
 .input-field{
   display: flex;
   justify-content: space-between;
@@ -100,4 +97,27 @@
   font-size: 18px;
   text-indent: 2px;
   padding: 5px;  
+}
+
+
+/* Dashboard Css */
+
+.modal-title {
+  margin-left: 100px;
+  font-size: 30px;
+  color: cadetblue; 
+  font-family: monospace;    
+} 
+
+.deshboard{
+  background-color:rgb(65, 65, 82); 
+  height: 100vh;
+  margin-top: -20px;
+}
+
+.header {
+  color: #98b6d4;
+  text-align: center;
+  padding : 30px 0px 0px 0px;
+  margin: 0 0 -20px 0;
 }

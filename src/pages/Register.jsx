@@ -30,7 +30,7 @@ export default function Form() {
     dispatch(registerData(
       data
     ))
-      setLoader(true);
+    setLoader(true);
   };
 
   const [type, setType] = useState('password');
@@ -59,13 +59,12 @@ export default function Form() {
             <h2>Register Here!!</h2>
             <hr></hr>
             <LinkedinContainer />
-            <button></button>
             <input type="text" {...register("name", { required: true })} placeholder='FullName' />
             {errors.name?.type === "required" && "Please enter name..."}
             <input type="email" {...register("email", { required: true, })} placeholder='test@gmail.com' />
             {errors.email?.type === "required" && "Please enter email..."}
             <div className='input-field'>
-              <input type={type} {...register("password", { required: true, maxLength: 8 })} placeholder='password'  />
+              <input type={type} {...register("password", { required: true, maxLength: 8 })} placeholder='password' />
               <span onClick={handleToggle} ><Icon icon={icon} size={18} /></span>
               {errors.password?.type === "required" && "Please enter password..."}
               {errors.password?.type === "maxLength" && "Password maxLength is 8 "}
