@@ -109,7 +109,8 @@ const About = () => {
            <div className='project'>
               <h3>PROJECT</h3>
                <p>
-                 * Ather Energy.
+                 * Ather Energy. <br />
+                   (11-Aug-2022 to Present)
                </p>
            </div>
            <div className="declaration">
