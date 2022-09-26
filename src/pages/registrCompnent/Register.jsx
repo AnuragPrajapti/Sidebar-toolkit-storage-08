@@ -21,7 +21,9 @@ export default function Form() {
     title.setTitle("Register Component...")
 
   }, [])
+ 
 
+  //dispatch data from redux 
   const dispatch = useDispatch();
   const [loader, setLoader] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm()
