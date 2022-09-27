@@ -9,32 +9,33 @@ import 'react-toastify/dist/ReactToastify.css';
 import NoteContext from '../../Context/NoteContext'
 
 const Login = () => {
-
-   const title = useContext(NoteContext)
-
+  
+  const title = useContext(NoteContext)
    useEffect(() => {
      title.setTitle("Login Component..")
   },[])
    
-
    const dispatch = useDispatch()
    const navigate = useNavigate() 
    const [inpval, setInpval] = useState({
     email : "",
     password : ""
    })
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const  userData = JSON.parse(localStorage.getItem("register"));
-    userData.filter((e) => {
-      if (e.email === inpval.email && e.password === inpval.password )
-     { 
-      toast.success("User Login Successfully!!",{
+     
+   const authLoginData = useSelector( state => state.users)
+   
+   const handleLogin = (e) => {
+     e.preventDefault();
+     const  userData = JSON.parse(localStorage.getItem("register"));
+     userData.filter((e) => {
+      if(e.email === inpval.email && e.password === inpval.password )
+       {
+         toast.success("User Login Successfully!!",{
          position : "top-center"
-      })
-      navigate('/deshboard')
-      dispatch(loginData(inpval))
-     }
+         })
+         navigate('/deshboard')
+         dispatch(loginData(inpval))
+       }
       else {
           toast.error("Plz Enter A valid Details!",{
             position : "top-center"
@@ -44,12 +45,12 @@ const Login = () => {
    }
   
   return (
-    <div>
-      <div className='header'>
+    <div className='container_Wrapper'>
+      <div className='loginHeader'>
         <h1 align="center" >Login Here!!</h1> <hr />
       </div>
-      <div className='container-body'>
-        <form>
+      <div className='container'>
+        <form className="container-body">
           <div className="mb-3">
             <label className="form-label">Email address</label>
             <input type="email"
@@ -78,8 +79,8 @@ const Login = () => {
             <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
           </div>
           <button type="submit" className="btn btn-primary" onClick={handleLogin} >Login</button>
-        </form>
         <p className='mt-3'>Don't Have an Account?<span><NavLink to="/register">Register</NavLink></span> </p>
+        </form>
        </div>
           <ToastContainer />
     </div>

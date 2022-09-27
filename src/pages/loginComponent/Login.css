@@ -1,14 +1,24 @@
-.form-control{
-    width: 450px;
+ 
+.loginHeader{
+  background-color:rgb(65, 65, 82); 
+  margin-top: -20px;
 }
+
+.container_Wrapper{
+  background-color:rgb(65, 65, 82); 
+  height: 100vh;
+}
+
 .container-body{
-    padding: 2%;
-    width: auto;
-    /* padding-left: 10%; */
-    border : 2px solid black;
-    width: 750px;
-    box-shadow: 0 0 5px 5px;
-    border-radius: 5px;
-    margin-left: 250px;
-    background: floralwhite;
+ width: 750px; 
+ padding: 2%;
+ border : 1px solid black;
+ box-shadow: 0 0 1px 1px;
+ border-radius: 5px;
+ background: #a6b4c3;
+ 
+}
+
+.form-control{
+  width: 450px;
 }
