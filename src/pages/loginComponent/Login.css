@@ -1,24 +1,35 @@
- 
-.loginHeader{
-  background-color:rgb(65, 65, 82); 
-  margin-top: -20px;
-}
-
-.container_Wrapper{
-  background-color:rgb(65, 65, 82); 
+.container_Wrapper {
   height: 100vh;
+  width: 100%;
+  margin-top: -50px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.container-body{
- width: 750px; 
- padding: 2%;
- border : 1px solid black;
- box-shadow: 0 0 1px 1px;
- border-radius: 5px;
- background: #a6b4c3;
- 
+.container-body {
+  width: 35%;
+  padding: 2%;
+  box-shadow: 0 0 1px 1px;
+  background: #a6b4c3;
+  float: left;
+  height: 600px;
+  margin: 110px 0px 0px 192px;
 }
 
-.form-control{
-  width: 450px;
+.headingWrapper{
+  text-align: center;
+  padding-top: 20px;
+  border-bottom: solid 2px black;
+  width: 400px;
+  font-family:monospace;
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 35%;
+  float: right;
+  background-color: white;
+  height: 600px;
+  margin: 110px 196px 0px 0px;
+  border-radius: 0px;
 }
