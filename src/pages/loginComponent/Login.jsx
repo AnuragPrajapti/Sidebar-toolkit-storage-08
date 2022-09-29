@@ -7,34 +7,36 @@ import { NavLink } from 'react-router-dom'
 import { toast , ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import NoteContext from '../../Context/NoteContext'
+import backgroundImage from '../../Images/backgroundImage.jpg'
 
 const Login = () => {
-
-   const title = useContext(NoteContext)
-
+  
+  const title = useContext(NoteContext)
    useEffect(() => {
      title.setTitle("Login Component..")
   },[])
    
-
    const dispatch = useDispatch()
    const navigate = useNavigate() 
    const [inpval, setInpval] = useState({
     email : "",
     password : ""
    })
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const  userData = JSON.parse(localStorage.getItem("register"));
-    userData.filter((e) => {
-      if (e.email === inpval.email && e.password === inpval.password )
-     { 
-      toast.success("User Login Successfully!!",{
+     
+   const authLoginData = useSelector( state => state.users)
+   
+   const handleLogin = (e) => {
+     e.preventDefault();
+     const  userData = JSON.parse(localStorage.getItem("register"));
+     userData.filter((e) => {
+      if(e.email === inpval.email && e.password === inpval.password )
+       {
+         toast.success("User Login Successfully!!",{
          position : "top-center"
-      })
-      navigate('/deshboard')
-      dispatch(loginData(inpval))
-     }
+         })
+         navigate('/deshboard')
+         dispatch(loginData(inpval))
+       }
       else {
           toast.error("Plz Enter A valid Details!",{
             position : "top-center"
@@ -44,12 +46,12 @@ const Login = () => {
    }
   
   return (
-    <div>
-      <div className='header'>
-        <h1 align="center" >Login Here!!</h1> <hr />
-      </div>
-      <div className='container-body'>
-        <form>
+    <div className='container_Wrapper' style={{backgroundImage: `url(${backgroundImage})`}} >
+      <div className='container' style={{width : '100%'}}>
+        <form className="container-body">
+            <div className='headingWrapper' >
+             <h3>Login Here!!</h3>
+            </div>
           <div className="mb-3">
             <label className="form-label">Email address</label>
             <input type="email"
@@ -59,7 +61,6 @@ const Login = () => {
               name='email'
               value={inpval.email}
               onChange={(e) => setInpval({ ...inpval,email: e.target.value })}
-
             />
           </div>
           <div className="mb-3">
@@ -78,8 +79,11 @@ const Login = () => {
             <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
           </div>
           <button type="submit" className="btn btn-primary" onClick={handleLogin} >Login</button>
-        </form>
         <p className='mt-3'>Don't Have an Account?<span><NavLink to="/register">Register</NavLink></span> </p>
+        </form>
+         <div className="image">
+         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample image" />
+         </div>
        </div>
           <ToastContainer />
     </div>

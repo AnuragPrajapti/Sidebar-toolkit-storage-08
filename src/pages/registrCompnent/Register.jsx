@@ -7,7 +7,7 @@ import { registerData } from '../../redux-Toolkit/reducer/createSlice';
 import { NavLink } from 'react-router-dom';
 import NoteContext from '../../Context/NoteContext';
 import Icon from 'react-icons-kit';
-import { eye } from 'react-icons-kit/feather/eye'
+import { eye } from  'react-icons-kit/feather/eye'
 import { eyeOff } from 'react-icons-kit/feather/eyeOff'
 import LinkedinContainer from '../linkedin/LinkedinContainer';
 import { Spinner } from 'react-bootstrap';
@@ -21,7 +21,6 @@ export default function Form() {
     title.setTitle("Register Component...")
 
   }, [])
- 
 
   //dispatch data from redux 
   const dispatch = useDispatch();
@@ -62,9 +61,9 @@ export default function Form() {
             <hr></hr>
             <LinkedinContainer />
             <input type="text" {...register("name", { required: true })} placeholder='FullName' />
-            {errors.name?.type === "required" && "Please enter name..."}
+            {errors.name?.type === "required" && <p style={{color : "red"}}>"Please enter name..."</p> }
             <input type="email" {...register("email", { required: true, })} placeholder='test@gmail.com' />
-            {errors.email?.type === "required" && "Please enter email..."}
+            {errors.email?.type === "required" && <p style={{color : "red"}}>"Please enter email..."</p>}
             <div className='input-field'>
               <input type={type} {...register("password", { required: true, maxLength: 8 })} placeholder='password' />
               <span onClick={handleToggle} ><Icon icon={icon} size={18} /></span>

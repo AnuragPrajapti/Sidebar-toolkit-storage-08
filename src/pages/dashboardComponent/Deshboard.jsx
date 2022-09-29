@@ -16,8 +16,8 @@ import { Spinner } from 'react-bootstrap';
 import Icon from 'react-icons-kit';
 
 const Deshboard = () => {
-   
-   // Data get by Redux-Toolkit and LocalStorage 
+
+  // Data get by Redux-Toolkit and LocalStorage 
   const { register, reset, formState: { errors }, setValue, handleSubmit } = useForm()
   const userData = JSON.parse(localStorage.getItem('register'));
   const id = useSelector(state => state.users.id)
@@ -28,8 +28,8 @@ const Deshboard = () => {
   const [loader, setLoader] = useState(false);
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
-  
-   // Heading Title 
+
+  // Heading Title 
   const title = useContext(NoteContext)
   useEffect(() => {
     title.setTitle("DeshBoard...")
@@ -57,7 +57,7 @@ const Deshboard = () => {
       setValue("id", id)
     }
   }, [id])
- 
+
   // Update User!!!
   const handleUpdate = (data) => {
     reset();
@@ -65,9 +65,9 @@ const Deshboard = () => {
     console.log("update Data", data)
     setLoader(true)
   }
- 
+
   // Password hide and show!!!!
- const handleToggle = (e) => {
+  const handleToggle = (e) => {
     if (type === 'password') {
       setIcon(eye);
       setType('text');
@@ -116,11 +116,12 @@ const Deshboard = () => {
                     <td onClick={() => handleEdit(id)} data-toggle="modal" data-target="#exampleModal">
                       <BorderColorIcon style={{ color: "green", marginLeft: "-60px" }} />
                     </td>
-                  </tr>)})
-            } 
+                  </tr>)
+              })
+            }
           </tbody>
         </table>
-         <p className='mt-3'>Don't Have an Account?<span><NavLink to="/register">Register</NavLink></span> </p>
+        <p className='mt-3'>Don't Have an Account?<span><NavLink to="/register">Register</NavLink></span> </p>
       </div>
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
@@ -131,7 +132,7 @@ const Deshboard = () => {
             </div>
             <div className="modal-body">
               <div>
-                   <form id='form' className='flex flex-col' onSubmit={handleSubmit(handleUpdate)}>
+                <form id='form' className='flex flex-col' onSubmit={handleSubmit(handleUpdate)}>
                   <input type="text" {...register("name", { required: true })} placeholder='FullName' />
                   {errors.name?.type === "required" && "Please enter name..."}
                   <input type="email" {...register("email", { required: true, })} placeholder='test@gmail.com' />

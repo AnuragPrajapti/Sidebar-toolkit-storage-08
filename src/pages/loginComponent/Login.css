@@ -1,14 +1,35 @@
-.form-control{
-    width: 450px;
+.container_Wrapper {
+  height: 100vh;
+  width: 100%;
+  margin-top: -50px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.container-body{
-    padding: 2%;
-    width: auto;
-    /* padding-left: 10%; */
-    border : 2px solid black;
-    width: 750px;
-    box-shadow: 0 0 5px 5px;
-    border-radius: 5px;
-    margin-left: 250px;
-    background: floralwhite;
+
+.container-body {
+  width: 35%;
+  padding: 2%;
+  box-shadow: 0 0 1px 1px;
+  background: #a6b4c3;
+  float: left;
+  height: 600px;
+  margin: 110px 0px 0px 192px;
+}
+
+.headingWrapper{
+  text-align: center;
+  padding-top: 20px;
+  border-bottom: solid 2px black;
+  width: 400px;
+  font-family:monospace;
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 35%;
+  float: right;
+  background-color: white;
+  height: 600px;
+  margin: 110px 196px 0px 0px;
+  border-radius: 0px;
 }
