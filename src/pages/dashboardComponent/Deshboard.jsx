@@ -5,6 +5,7 @@ import BorderColorIcon from '@mui/icons-material/BorderColor';
 import { deleteData } from '../../redux-Toolkit/reducer/createSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { editData } from '../../redux-Toolkit/reducer/createSlice';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { updateData } from '../../redux-Toolkit/reducer/createSlice';
 import { NavLink } from 'react-router-dom';
@@ -21,7 +22,7 @@ const Deshboard = () => {
   const userData = JSON.parse(localStorage.getItem('register'));
   const id = useSelector(state => state.users.id)
   const dispatch = useDispatch();
-
+ 
   //State
   const [loader, setLoader] = useState(false);
   const [type, setType] = useState('password');
@@ -31,7 +32,7 @@ const Deshboard = () => {
   const title = useContext(NoteContext)
   useEffect(() => {
     title.setTitle("DashBoard...")
-  })
+  },[title])
 
   // Delete User!!!
   const handleDelete = (id) => {
@@ -54,7 +55,7 @@ const Deshboard = () => {
       setValue("number", data.number)
       setValue("id", id)
     }
-  })
+  }, [id])
 
   // Update User!!!
   const handleUpdate = (data) => {
@@ -81,11 +82,18 @@ const Deshboard = () => {
     setLoader(false);
   }, 5000);
 
+  const navigate = useNavigate()
+  const logOut = () => {
+     navigate('/')
+  };
+
+
   return (
     <div className='deshboard' >
       <div className='header'>
-        <h2>Users Details</h2>
+        <h3>Users Details</h3>
       </div>
+        <button className='dashboardBtn btn btn-primary' onClick={logOut}>Logout</button>
       <div className='table_body' >
         <table className='table' >
           <thead className='thead' >
