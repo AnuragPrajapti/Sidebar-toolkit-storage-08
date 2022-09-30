@@ -47,6 +47,7 @@ export default function Form() {
       setType('password');
     }
   }
+  
   //Spinner Functionality   
   setTimeout(() => {
     setLoader(false);

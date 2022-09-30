@@ -1,15 +1,13 @@
 import React from 'react'
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 
-const useAuth = () =>{
-    const user = { loggedIn : false };
-    return user && user.loggedIn;
-};
-
-const PrivateRoutes = () => {
-    const isAuth = useAuth();
-    return isAuth ? <Outlet /> : <Navigate to='/login' />
- }
+const PrivateRoutes = ({ isLoggedIn, children }) => {
+    
+    if(!isLoggedIn){
+        return <Navigate to='/login' replace />;
+    }
+    return children
+}
 
 export default PrivateRoutes;

@@ -7,13 +7,12 @@
 }
 
 .container-body {
-  width: 35%;
-  padding: 2%;
+  padding: 3%;
   box-shadow: 0 0 1px 1px;
   background-color: rgb(73, 105, 116);
   float: left;
   height: 600px;
-  margin: 110px 0px 0px 192px;
+  margin : 110px 0px 0px 40px;
 }
 
 .headingWrapper{
@@ -26,20 +25,33 @@
 }
 
 .image {
-  width: 35%;
-  float: right;
-  background-color: white;
+  display: flex;
+  width: 40%;
   height: 600px;
-  margin: 110px 196px 0px 0px;
   border-radius: 0px;
+}
+ 
+@media screen and (max-width: 767px)  {
+  .image{
+    display: none;
+  }
 }
 
 .image img{
-  margin-top: 80px;
+  max-width: 100%;
+  margin: 110px 0 0 0;
+  background: white;
+  height: 600px;
 }
 .loginBtn {
   width: 200px;
   box-shadow: 0 0 1px 1px;
   margin: 0 0px 5px 0;
   border-radius: 0px;
+}
+
+.input-group-text {
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
