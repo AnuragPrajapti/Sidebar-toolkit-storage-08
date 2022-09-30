@@ -1,5 +1,5 @@
 import React, { useContext, useState , useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 import { loginData } from '../../redux-Toolkit/reducer/createSlice'
@@ -14,7 +14,7 @@ const Login = () => {
   const title = useContext(NoteContext)
    useEffect(() => {
      title.setTitle("Login Component..")
-  },[])
+  },[title])
    
    const dispatch = useDispatch()
    const navigate = useNavigate() 
@@ -23,13 +23,13 @@ const Login = () => {
     password : ""
    })
      
-   const authLoginData = useSelector( state => state.users)
+  //  const authLoginData = useSelector( state => state.users)
    
    const handleLogin = (e) => {
      e.preventDefault();
      const  userData = JSON.parse(localStorage.getItem("register"));
-     userData.filter((e) => {
-      if(e.email === inpval.email && e.password === inpval.password )
+     userData?.filter((ele) => {
+      if(ele.email === inpval.email && ele.password === inpval.password )
        {
          toast.success("User Login Successfully!!",{
          position : "top-center"
@@ -72,14 +72,14 @@ const Login = () => {
               value={inpval.password}
               onChange={(e) => setInpval({ ...inpval,password: e.target.value })}
             />
-            <div id="emailHelp" className="form-text">We'll never share your password with anyone else.</div>
+            <div id="emailHelp" className="form-text" style={{color : "#191919"}} >We'll never share your password with anyone else.</div>
           </div>
           <div className="mb-3 form-check">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+            <input required={true} type="checkbox" className="form-check-input" id="exampleCheck1" />
+            <label  className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
           </div>
-          <button type="submit" className="btn btn-primary" onClick={handleLogin} >Login</button>
-        <p className='mt-3'>Don't Have an Account?<span><NavLink to="/register">Register</NavLink></span> </p>
+          <button  type="submit" className=" loginBtn btn btn-primary" onClick={handleLogin} >Login</button>
+        <p className='mt-3'>Don't Have an Account?<span><NavLink to="/register" style={{color : "darkblue"}} >Register</NavLink></span> </p>
         </form>
          <div className="image">
          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample image" />

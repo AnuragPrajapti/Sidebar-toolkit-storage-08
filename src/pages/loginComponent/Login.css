@@ -10,7 +10,7 @@
   width: 35%;
   padding: 2%;
   box-shadow: 0 0 1px 1px;
-  background: #a6b4c3;
+  background-color: rgb(73, 105, 116);
   float: left;
   height: 600px;
   margin: 110px 0px 0px 192px;
@@ -31,5 +31,15 @@
   background-color: white;
   height: 600px;
   margin: 110px 196px 0px 0px;
+  border-radius: 0px;
+}
+
+.image img{
+  margin-top: 80px;
+}
+.loginBtn {
+  width: 200px;
+  box-shadow: 0 0 1px 1px;
+  margin: 0 0px 5px 0;
   border-radius: 0px;
 }

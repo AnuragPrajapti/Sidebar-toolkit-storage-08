@@ -5,7 +5,6 @@ import BorderColorIcon from '@mui/icons-material/BorderColor';
 import { deleteData } from '../../redux-Toolkit/reducer/createSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { editData } from '../../redux-Toolkit/reducer/createSlice';
-import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { updateData } from '../../redux-Toolkit/reducer/createSlice';
 import { NavLink } from 'react-router-dom';
@@ -22,7 +21,6 @@ const Deshboard = () => {
   const userData = JSON.parse(localStorage.getItem('register'));
   const id = useSelector(state => state.users.id)
   const dispatch = useDispatch();
-  const params = useParams();
 
   //State
   const [loader, setLoader] = useState(false);
@@ -32,8 +30,8 @@ const Deshboard = () => {
   // Heading Title 
   const title = useContext(NoteContext)
   useEffect(() => {
-    title.setTitle("DeshBoard...")
-  }, [])
+    title.setTitle("DashBoard...")
+  })
 
   // Delete User!!!
   const handleDelete = (id) => {
@@ -56,7 +54,7 @@ const Deshboard = () => {
       setValue("number", data.number)
       setValue("id", id)
     }
-  }, [id])
+  })
 
   // Update User!!!
   const handleUpdate = (data) => {
