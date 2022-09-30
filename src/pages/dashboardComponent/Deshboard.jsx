@@ -84,6 +84,7 @@ const Deshboard = () => {
 
   const navigate = useNavigate()
   const logOut = () => {
+     localStorage.removeItem('signIn')
      navigate('/')
   };
 

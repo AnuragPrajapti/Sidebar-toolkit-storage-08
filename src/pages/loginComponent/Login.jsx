@@ -36,6 +36,7 @@ const Login = () => {
         toast.success("User Login Successfully!!", {
           position: "top-center"
         })
+         localStorage.setItem("signIn",JSON.stringify(inpval));
         navigate('/deshboard')
         dispatch(loginData(inpval))
       }
