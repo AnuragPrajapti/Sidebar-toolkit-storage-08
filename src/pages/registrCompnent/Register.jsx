@@ -50,7 +50,7 @@ export default function Form() {
   //Spinner Functionality   
   setTimeout(() => {
     setLoader(false);
-  }, 5000);
+  }, 3000);
 
   return (
     <section className='container' >
@@ -63,19 +63,19 @@ export default function Form() {
             <input type="text" {...register("name", { required: true })} placeholder='FullName' />
             {errors.name?.type === "required" && <p style={{color : "red"}}>"Please enter name..."</p> }
             <input type="email" {...register("email", { required: true, })} placeholder='test@gmail.com' />
-            {errors.email?.type === "required" && <p style={{color : "red"}}>"Please enter email..."</p>}
+            {errors.email?.type === "required" && <p style={{color : "red"}}>Please enter email...</p>}
             <div className='input-field'>
               <input type={type} {...register("password", { required: true, maxLength: 8 })} placeholder='password' />
               <span onClick={handleToggle} ><Icon icon={icon} size={18} /></span>
-              {errors.password?.type === "required" && "Please enter password..."}
-              {errors.password?.type === "maxLength" && "Password maxLength is 8 "}
+              {errors.password?.type === "required" && <p style={{color : "red"}}>Please enter password...</p>}
+              {errors.password?.type === "maxLength" &&  <p style={{color : "red"}}>Password maxLength is 8</p> }
             </div>
             <input type="date" {...register("date", { required: true })} />
-            {errors.date?.type === "required" && "Please enter Date..."}
+            {errors.date?.type === "required" && <p style={{color : "red"}}>Please enter Date...</p>}
             <input type="number" {...register("number", { required: true, minLength: 10, maxLength: 10 })} placeholder='mobile number' />
-            {errors.number?.type === "required" && "Mobile Number is required"}
-            {errors.number?.type === "minLength" && "min Length Exceed"}
-            {errors.number?.type === "maxLength" && "Max Length Exceed"}
+            {errors.number?.type === "required" && <p style={{color : "red"}}>Mobile Number is required</p>}
+            {errors.number?.type === "minLength" && <p style={{color : "red"}}>min Length Exceed</p>}
+            {errors.number?.type === "maxLength" && <p style={{color : "red"}}>Max Length Exceed </p>}
             {
               loader ? <Spinner animation="border" /> : <button className='btn'>Register</button>
             }

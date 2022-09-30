@@ -11,6 +11,8 @@ import Login from "./pages/loginComponent/Login";
 import Messages from "./pages/messageComponent/Message";
 import Settings from "./pages/settingComponent/Settings";
 import NoteState from "./Context/NoteState";
+import PrivateRoutes from "./pages/privateComponent/PrivateRoutes";
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/deshboard" element={<Deshboard />} />
             <Route path="/login" element={<Login />} />
+            <Route element={<PrivateRoutes  />} />
             <Route path="/messages" element={<Messages />} />
             <Route path="/setting" element={<Settings />} />
             <Route path="/" element={<Home />} />
