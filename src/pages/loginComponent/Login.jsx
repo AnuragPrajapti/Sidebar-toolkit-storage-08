@@ -11,7 +11,7 @@ import backgroundImage from '../../Images/backgroundImage.jpg'
 import Icon from 'react-icons-kit';
 import { eye } from 'react-icons-kit/feather/eye'
 import { eyeOff } from 'react-icons-kit/feather/eyeOff'
-
+import { Spinner } from 'react-bootstrap'
 const Login = () => {
 
   const title = useContext(NoteContext)
@@ -28,6 +28,8 @@ const Login = () => {
 
   //  const authLoginData = useSelector( state => state.users)
 
+   const [ isLoading , setisLoading ] = useState(false);
+
   const handleLogin = (e) => {
     e.preventDefault();
     const userData = JSON.parse(localStorage.getItem("register"));
@@ -36,17 +38,22 @@ const Login = () => {
         toast.success("User Login Successfully!!", {
           position: "top-center"
         })
-         localStorage.setItem("signIn",JSON.stringify(inpval));
+        setisLoading(true)
         navigate('/deshboard')
-        dispatch(loginData(inpval))
+        dispatch(loginData(inpval)) 
+        localStorage.setItem("signIn",JSON.stringify(inpval));
       }
-      else {
+      else{
         toast.error("Plz Enter A valid Details!", {
           position: "top-center"
         })
       }
     })
   }
+
+   setTimeout(()=>{
+     setisLoading(false)
+   },5000)
 
   // esy on and off password functionality
   const [type, setType] = useState('password');
@@ -99,7 +106,9 @@ const Login = () => {
             <input required={true} type="checkbox" className="form-check-input" id="exampleCheck1" />
             <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
           </div>
-          <button type="submit" className=" loginBtn btn btn-primary" onClick={handleLogin} >Login</button>
+          {
+            isLoading ? <Spinner animation="border" />  :  <button type="submit" className=" loginBtn btn btn-primary" onClick={handleLogin} >Login</button>
+          }
           <p className='mt-3'>Don't Have an Account?<span><NavLink to="/register" style={{ color: "darkblue" }} >Register</NavLink></span> </p>
         </form>
         <div className="image">
