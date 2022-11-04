@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import NoteContext from '../../Context/NoteContext';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+
 const Settings = () => {
   const title = useContext(NoteContext)
   useEffect(() => {
@@ -165,10 +168,10 @@ const Settings = () => {
       <div className='container'>
         <h1>
           <span>
-            <button className='btn btn-secondary' >
-              {" "}
-              <span>&lt;</span>Black{" "}
-            </button>{" "}
+            <NavLink to='/'>
+            <button className='btn btn-secondary'>
+              <span>&lt;</span> Black
+            </button></NavLink>
             Settings
           </span>
         </h1>
